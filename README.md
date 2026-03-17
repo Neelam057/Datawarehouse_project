@@ -18,23 +18,21 @@ The project is designed as a **portfolio project** that showcases industry best 
 
 The project follows the **Medallion Architecture** pattern with three layers:
 
+### 🔷 Architecture Diagram
+
+![Data Architecture](docs/images/data_architecture.png)
+
 ### Bronze Layer
 
-* Stores **raw data** as received from source systems.
-* Data is ingested from **CSV files into SQL Server**.
-* No transformations are applied at this stage.
+* Stores **raw data** as received from source systems. Data is ingested from **CSV files into SQL Server**. No transformations are applied at this stage.
 
 ### Silver Layer
 
-* Data is **cleaned, standardized, and normalized**.
-* Data quality issues are resolved.
-* Data is transformed into a structured format for further processing.
+* Data is **cleaned, standardized, and normalized**. Data quality issues are resolved. Data is transformed into a structured format for further processing.
 
 ### Gold Layer
 
-* Contains **business-ready data models**.
-* Data is organized using a **Star Schema**.
-* Optimized for **analytics and reporting**.
+* Contains **business-ready data models**. Data is organized using a **Star Schema**. Optimized for **analytics and reporting**.
 
 ---
 
@@ -108,33 +106,14 @@ Develop a **modern SQL Server data warehouse** to consolidate sales data and ena
 ### Specifications
 
 **Data Sources**
-
 * Import data from two source systems:
-
   * ERP
   * CRM
 * Data is provided as **CSV files**.
-
-**Data Quality**
-
-* Clean and resolve data quality issues before analysis.
-
-**Data Integration**
-
-* Combine both sources into a **single analytical data model**.
-
-**Scope**
-
-* Focus only on the **latest dataset**.
-* Historical tracking is **not required**.
-
-**Documentation**
-
-* Provide clear documentation for:
-
-  * Data models
-  * Architecture
-  * Data flows
+**Data Quality** - Clean and resolve data quality issues before analysis.
+**Data Integration** - Combine both sources into a **single analytical data model**.
+**Scope** - Focus only on the **latest dataset**. Historical tracking is **not required**.
+**Documentation** - Provide clear documentation for Data models, Architecture, Data flows
 
 ---
 
