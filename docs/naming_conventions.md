@@ -1,9 +1,9 @@
 # Naming Conventions
----
+
 This document outlines the naming conventions used for schemas, tables, views, columns, and other objects in the data warehouse.
 
 ## Table of Contents
----
+
 * General Principles
 * Table Naming Conventions
   * Bronze Rules
@@ -15,12 +15,12 @@ This document outlines the naming conventions used for schemas, tables, views, c
 * Stored Procedures
 
 ## General Principles
----
+
 * **Naming Style:** Use `snake_case` (lowercase with underscores `_` to separate words)
 * **Avoid Reserved Words:** Do not use SQL reserved keywords as object names
 
 ## Table Naming Conventions
----
+
 ### Bronze Rules
 
 * All names must start with the **source system name**
@@ -55,7 +55,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 **Examples:** ```dim_customers , fact_sales```
 
 ## Glossary of Category Patterns
----
+
 | Pattern | Meaning         | Example(s)                             |
 | ------- | --------------- | -------------------------------------- |
 | dim_    | Dimension table | dim_customer, dim_product              |
@@ -64,7 +64,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 
 ## Column Naming Conventions
----
+
 ### Surrogate Keys
 
 * All primary keys in dimension tables must use the suffix `_key`
@@ -76,7 +76,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 **Example:** ```customer_key``` → Surrogate key in `dim_customers`
 
 ### Technical Columns
----
+
 * All technical columns must start with the prefix `dwh_`
 
 **Format:** ```dwh_<column_name>```
@@ -86,7 +86,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 **Example:** ```dwh_load_date``` → Stores the record load date
 
 ## Stored Procedures
----
+
 * All stored procedures for data loading must follow this pattern:
   
 **Format:** ```load_<layer>``` * `<layer>`: Target layer (`bronze`, `silver`, `gold`)
